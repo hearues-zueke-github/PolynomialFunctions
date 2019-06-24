@@ -3,4 +3,4 @@ project(PolynomialFunctions)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(PolynomialFunctions main.cpp Polynome.cpp Polynome.h Polynomial.cpp Polynomial.h)
+add_executable(PolynomialFunctions main.cpp Polynome.cpp Polynome.h Polynomial.cpp Polynomial.h Utils.cpp Utils.h SystemOfLinearEquations.cpp SystemOfLinearEquations.h)

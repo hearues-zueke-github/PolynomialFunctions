@@ -8,23 +8,32 @@
 
 #include <iostream>
 #include <vector>
+#include <bits/stdc++.h>
 
-#include "Polynome.h"
+#include "Utils.h"
+
+class Polynome;
 
 using namespace std;
 
 class Polynomial {
 private:
     vector<Polynome> _polynomes;
+    vector<int64_t> _occurences;
 public:
-    Polynomial(const vector<Polynome>& polynomes);
-    Polynomial(const Polynomial& obj);
-    virtual ~Polynomial();
+  Polynomial();
+  Polynomial(const vector<Polynome>& polynomes);
+  Polynomial(const Polynomial& obj);
+  virtual ~Polynomial();
 
-    void multiplyPolynomialItself();
+  const vector<Polynome>& getPolynomes() const;
+  void setPolynomes(const vector<Polynome>& polynomes);
 
-    friend ostream& operator<<(ostream& os, const Polynomial& obj);
+  void multiplyPolynomials(Polynome &p);
+
+  friend ostream& operator<<(ostream& os, const Polynomial& obj);
+
+  friend bool operator==(const Polynomial& lhs, const Polynomial& rhs);
 };
-
 
 #endif //SIMPLEVECTORPRINTS_POLYNOMIAL_H
